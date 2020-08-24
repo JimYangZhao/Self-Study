@@ -5,37 +5,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Self-Study/mysass.sass">
+  <link rel="stylesheet" href="/Self-Study/style.css">
+  <script type="text/javascript" src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <!-- Create a header/Nav Bar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">
-          <img src="https://bulkcarrierspei.com/app/themes/jac/dist/images/bulk-logo.png" alt="logo" style="width:40px;">
-        </a>
-        
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-          </li>
-        </ul>
-    </nav>
-      
-    <div class="container-fluid">
-        <h3>Brand / Logo</h3>
-        <p>When using the .navbar-brand class on images, Bootstrap 4 will automatically style the image to fit the navbar.</p>
-    </div>
 
+<body>
+    <!-- Nav Bar Setting Start -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger"  id="navbar">  
+        <div class="container-fluid">  
+           <a class="navbar-brand" id="logo" href="#"> 
+               <img src="https://bulkcarrierspei.com/app/themes/jac/dist/images/bulk-logo.png" alt="logo">
+            </a>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">  
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>  
+              
+                <div class="collapse navbar-collapse" id="mynav">  
+                <ul class="navbar-nav ml-auto ">  
+                   <li class="nav-item active" >  
+                      
+                    <a  class="nav-link" href="#">Home</a>  
+                    </li>  
+                    <li class="nav-item " >  
+                      
+                    <a  class="nav-link" href="#">About Us</a>  
+                    </li>  
+                    <li class="nav-item" >  
+                      
+                    <a  class="nav-link" href="#">Service</a>  
+                    </li>  
+                    <li class="nav-item" >  
+                      
+                    <a  class="nav-link" href="#">Plans</a>  
+                    </li>  
+                    <li class="nav-item" >  
+                      
+                    <a  class="nav-link" href="#">Connect us</a>  
+                    </li>  
+                
+                </ul>  
+                </div>
+        </div>
+    </nav> 
+    <!-- Nav Bar Setting END -->
+
+
+
+    <!-- Carousel Slider Start -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The Slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles"  width="100%" height=auto>
+            <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Chicago"  width="100%" height=auto>
+            <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
+            </div> 
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="New York"  width="100%" height=auto>
+            <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>We had such a great time in LA!</p>
+            </div> 
+          </div>
+        </div>
+
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+    </div>
+    <!-- Carousel Slider End -->
+
+    <!-- Web content Start-->
+    <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+        <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
+        <p>Scroll down this frame to see the effect!</p>
+        <p>Scroll to the top to remove the effect.</p>
+        <p><b>Note:</b> We have also made the navbar responsive, resize the browser window to see the effect.</p>
+        <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    <!-- Web content END-->
 
 </body>
 </html>
