@@ -1,7 +1,7 @@
 /* Make the image fully responsive */
 .carousel-inner img {
   width: 100%;
-  height: 100%;
+  height: 850px;
 }
 
 * {
@@ -22,17 +22,17 @@ body {
   background-size: 50%, 50%;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0);
+  z-index: -1;
 }
 
 #navbar {
-  overflow: hidden;
   background-color: #f1f1f1;
   padding: 30px 10px 20px 100px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   width: 100%;
   top: 0; /* At the top */
-  z-index: 99;
+  z-index: 2;
 }
 
 /* Style the navbar links */
@@ -42,10 +42,42 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 25px;
   border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  width: max-content;
+  letter-spacing: 1px;
+}
+#navbar p{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  width: max-content;
+  letter-spacing: 2px;
+  padding-left: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #272727;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 3;
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: all .5s ease;
 }
 
 /* Style the logo */
@@ -63,8 +95,8 @@ body {
 
 /* Style the active/current link */
 #navbar a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: white; 
 }
 
 /* Display some links to the right */
@@ -72,17 +104,155 @@ body {
   float: right;
 }
 
-/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 580px) {
+#navbar li:hover ul {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#navbar li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Add responsiveness - on screens less than 768px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 768px) {
   #navbar {
     padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
   }
   #navbar a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
+    padding-left: 20px;
   }
   #navbar-right {
     float: none;
   }
+}
+
+.fa.icon-white {
+  color: rgb(255, 255, 255);
+}
+
+.openBtn {
+  background: #f1f1f100;
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+.dropdown-menu > li > a {
+  background: rgba(0, 0, 0, 0);
+  display: block;
+}
+
+/* Change this breakpoint if you change the breakpoint of the navbar */
+
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.7s;
+    -webkit-animation-duration: 0.7s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
 }

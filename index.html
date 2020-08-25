@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/Self-Study/mysass.sass">
+  <link rel="stylesheet/sass" href="/Self-Study/mysass.sass">
   <link rel="stylesheet" href="/Self-Study/style.css">
-  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="/Self-Study/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -15,7 +16,7 @@
 
 <body>
     <!-- Nav Bar Setting Start -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger"  id="navbar">  
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger navbar-header"  id="navbar">  
         <div class="container-fluid">  
            <a class="navbar-brand" id="logo" href="#"> 
                <img src="https://bulkcarrierspei.com/app/themes/jac/dist/images/bulk-logo.png" alt="logo">
@@ -24,21 +25,31 @@
                 <span class="navbar-toggler-icon">
                 </span>
             </button>  
-              
+            
                 <div class="collapse navbar-collapse" id="mynav">  
-                <ul class="navbar-nav ml-auto ">  
+                <ul class="navbar-nav ml-auto justify-content-left">  
                    <li class="nav-item active" >  
                       
-                    <a  class="nav-link" href="#">Home</a>  
+                    <a  class="nav-link active" href="#">Home</a>  
                     </li>  
-                    <li class="nav-item " >  
+                    <li class="nav-item dropdown" >  
                       
-                    <a  class="nav-link" href="#">About Us</a>  
+                    <a  class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>  
+                    <ul class="dropdown-menu dropdown-content animate slideIn">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                      </ul>    
                     </li>  
-                    <li class="nav-item" >  
+                    <li class="nav-item dropdown" >  
                       
-                    <a  class="nav-link" href="#">Service</a>  
-                    </li>  
+                        <a  class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service</a>  
+                        <ul class="dropdown-menu dropdown-content animate slideIn">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                          </ul>    
+                        </li>  
                     <li class="nav-item" >  
                       
                     <a  class="nav-link" href="#">Plans</a>  
@@ -49,6 +60,45 @@
                     </li>  
                 
                 </ul>  
+                </div>
+                <div class="collapse navbar-collapse" id="mynav" style="padding-top: 12px;">  
+                    <ul class="navbar-nav ml-auto justify-content-center">  
+                       <li class="nav-item active" >  
+                          
+                        <p  class="nav-link" href="#">Home</p>  
+                        </li>  
+                        <li class="nav-item " >  
+                          
+                        <p  class="nav-link" href="#">About Us</p>  
+                        </li>  
+                        <li class="nav-item" >  
+                          
+                        <p  class="nav-link" href="#">Service</p>  
+                        </li>  
+                        <li class="nav-item" >  
+                          
+                        <div id="myOverlay" class="overlay">
+                            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                            <div class="overlay-content">
+                                <form action="/action_page.php">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="submit"><i class="fa fa-search icon-white"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <button class="openBtn" onclick="openSearch()"><i class="fa fa-search icon-white"></i></button>
+
+                        <script>
+                            function openSearch() {
+                                document.getElementById("myOverlay").style.display = "block";
+                            }
+                            
+                            function closeSearch() {
+                                document.getElementById("myOverlay").style.display = "none";
+                            }
+                        </script>
+                    </ul>  
                 </div>
         </div>
     </nav> 
@@ -104,7 +154,7 @@
     <!-- Carousel Slider End -->
 
     <!-- Web content Start-->
-    <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+    <div style="margin-top:50px;padding:150px 150px 25px 150px;font-size:30px">
         <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
         <p>Scroll down this frame to see the effect!</p>
         <p>Scroll to the top to remove the effect.</p>
