@@ -5,13 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet/sass" href="/Self-Study/mysass.sass">
-  <link rel="stylesheet" href="/Self-Study/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="/Self-Study/script.js"></script>
+  <link rel="stylesheet/sass" href="/Self-Study/mysass.sass">
+  <link rel="stylesheet" href="/Self-Study/style.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/Self-Study/script.js"></script>
+
 </head>
 
 <body>
@@ -61,21 +63,21 @@
                 
                 </ul>  
                 </div>
-                <div class="collapse navbar-collapse" id="mynav" style="padding-top: 20px;">  
+                <div class="collapse navbar-collapse" id="mynav" style="padding-top: 10px;">  
                     <ul class="navbar-nav ml-auto justify-content-center">  
-                       <li class="nav-item" >  
+                       <li class="nav-item" style="margin-left: 2px; margin-right: 2px;">  
                           
-                        <p  class="nav-link" href="#">Home</p>  
+                        <a  class="nav-link" style="font-size:15px;" href="#" >Home</a>  
                         </li>  
-                        <li class="nav-item " >  
+                        <li class="nav-item " style="margin-left: 2px; margin-right: 2px;">  
                           
-                        <p  class="nav-link" href="#">About Us</p>  
+                        <a  class="nav-link" style="font-size:15px;" href="#">About Us</a>  
                         </li>  
-                        <li class="nav-item" >  
+                        <li class="nav-item" style="margin-left: 2px; margin-right: 2px;">  
                           
-                        <p  class="nav-link" href="#">Service</p>  
+                        <a  class="nav-link" style="font-size:15px;" href="#">Service</a>  
                         </li>  
-                        <li class="nav-item" >  
+                        <li class="nav-item" style="margin-left: 2px; margin-right: 2px;">  
                           
                         <div id="myOverlay" class="overlay">
                             <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
@@ -107,7 +109,7 @@
 
 
     <!-- Carousel Slider Start -->
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide" data-ride="carousel" style="z-index: -1;">
 
         <!-- Indicators -->
         <ul class="carousel-indicators">
@@ -125,7 +127,9 @@
                 <h1>Los Angeles</h1>
                 <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing 
                     elit, </p>
-                <button type="button" class="btn btn-warning">Learn More</button>
+                <div class="button-container">
+                <button class="button"><span>Learn More</span></button>
+                </div>
             </div>  
           </div>
           <div class="carousel-item">
@@ -134,7 +138,9 @@
                 <h1>Los Angeles</h1>
                 <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing 
                     elit, </p>
-                <button type="button" class="btn btn-warning">Learn More</button>
+                <div class="button-container">
+                <button class="button"><span>Learn More</span></button>
+                </div>
             </div> 
           </div>
           <div class="carousel-item">
@@ -143,7 +149,9 @@
                 <h1>Los Angeles</h1>
                 <p>Lorem ipsum dolor dummy text to enable scrolling, sit amet, consectetur adipiscing 
                     elit, </p>
-                <button type="button" class="btn btn-warning">Learn More</button>
+                <div class="button-container">
+                    <button class="button"><span>Learn More</span></button>
+                </div>
             </div> 
           </div>
         </div>
@@ -162,7 +170,7 @@
     <!-- Carousel Slider End -->
 
     <!-- Web content Start-->
-    <div style="margin-top:50px;padding:150px 150px 25px 150px;font-size:30px">
+    <div style="margin-top:50px;padding:500px 150px 25px 150px;font-size:30px">
         <p><b>This example demonstrates how to shrink a navigation bar when the user starts to scroll the page.</b></p>
         <p>Scroll down this frame to see the effect!</p>
         <p>Scroll to the top to remove the effect.</p>
