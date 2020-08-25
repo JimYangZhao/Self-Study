@@ -26,7 +26,8 @@ body {
 }
 
 #navbar {
-  background-color: #f1f1f1;
+  background-color: #e11a21;
+  height: fit-content;
   padding: 30px 10px 20px 100px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
@@ -40,7 +41,6 @@ body {
   float: left;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 12px;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
@@ -55,7 +55,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis; 
   width: max-content;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding-left: 20px;
 }
 
@@ -72,7 +72,6 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 3;
-  
 }
 
 .dropdown:hover .dropdown-content {
@@ -80,23 +79,20 @@ body {
   transition: all .5s ease;
 }
 
-/* Style the logo */
-#navbar #logo {
-  font-size: 35px;
-  font-weight: bold;
-  transition: 0.4s;
-}
-
 /* Links on mouse-over */
 #navbar a:hover {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  color: rgb(255, 145, 0); 
+  transition: all .8s ease;
+
+}
+#navbar p:hover {
+  color: rgb(255, 145, 0); 
+  transition: all .8s ease;
 }
 
 /* Style the active/current link */
 #navbar a.active {
-  background-color: rgb(0, 0, 0);
-  color: white; 
+  color: rgb(255, 230, 0); 
 }
 
 /* Display some links to the right */
